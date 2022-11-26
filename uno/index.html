@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <title>Playfield Compare</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="cards.css" rel="stylesheet" type="text/css" />
+  <link href="animations.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="setupGame" class="container">
+    <form class="text-center">
+      <div class="form-group mt-5">
+        <label for="playerName">
+          <h1>Player Name</h1>
+        </label>
+        <input type="text" class="form-control form-size" id="playerName" value="TheLegend27">
+      </div>
+      <div class="form-group mt-5">
+        <label for="amtPlayers">
+          <h1>Number of Players</h1>
+        </label>
+        <select class="form-control form-size" id="amtPlayers">
+          <option value="2" selected="selected">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="form-group mt-5">
+        <button class="btn btn-primary center-block" type="button" onclick="startGame()">
+          <h1>New Game</h1>
+        </button>
+      </div>
+      <div class="form-group mt-5">
+        <button class="btn btn-primary center-block" type="button" onclick="window.open('rules.html','_self')">
+          <h1>Rules & Info</h1>
+        </button>
+      </div>
+    </form>
+
+  </div>
+
+  <div id="playingField" class="container mt-5 d-none">
+    <div class="row">
+      <div class="col center-card-hands" align="center">
+        <div id="TopSeatID"></div>
+        <div id="TopSeat"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div id="LeftSeatID"></div>
+        <div id="LeftSeat" class="sideHand"></div>
+      </div>
+      <div class="col-md-8 center-card-hands" align="center">
+        <div class="row" style="padding-top: 50px; padding-bottom: 50px">
+          <div class="col" style="padding-right: 200px">
+            <div class="drawDeckOnPlayfield black">
+              <div id="drawCardPile"></div>
+            </div>
+          </div>
+
+          <div class="col">
+            <br />
+            <div id="unoButton">
+              <button class="btn btn-primary center-block" type="button" onclick="callUno()">
+                <h2>Call Uno!</h2>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="discardDeckDiv"></div>
+          <div id="playfieldHand"></div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div id="RightSeatID"></div>
+        <div id="RightSeat" class="sideHand"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col center-card-hands" align="center">
+        <div id="BottomSeatID"></div>
+        <div id="BottomSeat"></div>
+        <div id="player1Hand"></div>
+      </div>
+    </div>
+
+    <div id="wildColor"></div>
+    <div id="overlay">
+      <div id="text">
+        <center>Choose a color!</center>
+        <div class="main-container">
+          <div class="size red-circle" onclick="selectWildColor('Red')"></div>
+          <div class="size blue-circle" onclick="selectWildColor('Blue')"></div>
+          <div class="size yellow-circle" onclick="selectWildColor('Yellow')"></div>
+          <div class="size green-circle" onclick="selectWildColor('Green')"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="deck.js"></script>
+    <script type="text/javascript" src="cards.js"></script>
+    <script type="text/javascript" src="special-cards.js"></script>
+    <script type="text/javascript" src="addCSSToCards.js"></script>
+    <script type="text/javascript" src="animations.js"></script>
+    <script type="text/javascript" src="players.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="cheats.js"></script>
+</body>
+
+</html>
