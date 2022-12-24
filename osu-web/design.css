@@ -1,0 +1,312 @@
+/*iOS
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+*/
+
+@font-face
+{
+	font-family: 'Arial';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Ubuntu Italic'), local('Ubuntu-Italic.woff'), url('font/italic') format('woff');
+}
+
+@font-face
+{
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url('font/bold.woff') format('woff');
+}
+
+@font-face
+{
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Ubuntu'), url('font/regular.woff') format('woff');
+}
+
+body, html
+{
+	height : 100%;
+	width : 100%;
+	
+	margin : 0;
+	padding : 0;
+}
+
+html > *
+{
+	width : 100%;
+	margin : 0;
+	padding : 0;
+}
+
+*
+{
+	overflow : hidden;
+	font-family: Arial, serif;
+	cursor: url("cursor.png") 32 32, auto;
+}
+
+canvas
+{
+	background-repeat : no-repeat;
+	background-position : center center;
+	background-attachment : fixed;
+	background-size: 100%;
+	margin : auto;
+}
+
+#adsense
+{
+	display : none;
+}
+
+/******************************************** loader ********************************************/
+
+progress
+{
+	width : 80%;
+	height : 5%;
+	
+	position : fixed;
+	top : 80%;
+	left : 10%;
+}
+
+progress:after
+{
+	content : attr(value) "%";
+	display : block;
+	margin : auto;
+	text-align : center;
+}
+
+progress + div
+{
+	position : fixed;
+	width : 100%;
+	height : 100%;
+	background-image : url(logo.png);
+	background-position : center 28.75%;
+	background-repeat : no-repeat;
+	cursor : progress;
+}
+
+/******************************************** readme ********************************************/
+
+#readme
+{
+	width : 50%;
+	height : 100%;
+	
+	position : fixed;
+	top : 0;
+	left : 0;
+	
+	overflow : auto;
+}
+
+#share
+{
+    margin : auto;
+    text-align : center;
+}
+
+    #share img
+    {
+        margin : 0 1% 0 0;
+    }
+
+h1
+{
+	text-align : center;
+	font-size : 2em;
+}
+
+h2
+{
+	border-bottom : 1px dotted gray;
+	font-size : 1em;
+	text-indent : 10%;
+}
+
+#readme div[data-title]:before
+{
+	content : attr(data-title);
+	border-bottom : 1px dotted gray;
+	font-size : 1em;
+	text-indent : 10%;
+	display : block;
+	padding-bottom : 1em;
+}
+
+.key
+{
+	width : 5%;
+	display : block;
+	float : left;
+	font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace, serif;
+	font-weight : bold;
+	text-transform : uppercase;
+}
+
+.warning
+{
+	color : red;
+	font-size : 2em;
+	text-transform : uppercase;
+	border : none;
+}
+
+/******************************************** picker ********************************************/
+
+html.scroll
+{
+	overflow : auto;
+}
+
+html.scroll body
+{
+    overflow : visible;
+}
+
+#picker
+{
+	width : 50%;
+	float : right;
+}
+
+	#picker > div
+	{
+		border : 1px solid silver;
+		border-right : 0;
+		border-radius : 10px 0 0 10px;
+		margin : 0.5% 0;
+		padding : 1%;
+		position : relative;
+		width : 95%;
+		float : right;
+		transition : background-color 0.3s ease-in;
+		-moz-transition : background-color 0.3s ease-in;
+		-webkit-transition : background-color 0.3s ease-in;
+	}
+
+		#picker > div:hover
+		{
+			font-weight : bold;
+			background-color : silver;
+		}
+		
+		#picker > div:not(:hover):after
+		{
+			content : " – " attr(data-artist) " – " attr(data-creator);
+			font-size : 0.75em;
+		}
+		
+		#picker > div:hover > div
+		{
+			font-weight : normal;
+			display : inline;
+		}
+	
+	#picker > div > div
+	{
+		margin-left : 5%;
+		padding : 0 2px;
+		display : none;
+	}
+	
+		#picker > div > div:hover
+		{
+			border-radius : 10px;
+			background-color : white;
+		}
+
+/******************************************** slider ********************************************/
+
+#slider
+{
+	overflow : hidden;
+	-moz-transition :	all 150ms ease-in;
+	-webkit-transition :	all 150ms ease-in;
+	-o-transition :		all 150ms ease-in;
+	position : relative;
+	width : 100%;
+}
+
+#slider:hover #mask
+{
+	-moz-animation-play-state	: paused;
+	-webkit-animation-play-state	: paused;
+}
+
+#slider #mask
+{
+	height : 100%;
+	width : 400%;
+	padding : 0;
+	margin : 0;
+	-moz-animation :	slide-animation 30s infinite;
+	-webkit-animation :	slide-animation 30s infinite;
+	position : relative;
+	left : 0px;
+	overflow:hidden;
+}
+
+#slider #mask > div
+{
+	display : inline;
+	width : 25%;
+	height : 100%;
+	margin : 0;
+	padding : 0;
+	float : left;
+	position : relative;
+}
+
+@-webkit-keyframes slide-animation
+{
+	20%	{left : 0;}
+
+	25%	{left : -100%;}
+	45%	{left : -100%;}
+
+	50%	{left : -200%;}
+	70%	{left : -200%;}
+
+	75%	{left : -300%;}
+	98%	{left : -300%;}
+
+	100%	{left : 0;}
+}
+@-moz-keyframes slide-animation
+{
+	20%	{left : 0;}
+
+	25%	{left : -100%;}
+	45%	{left : -100%;}
+
+	50%	{left : -200%;}
+	70%	{left : -200%;}
+
+	75%	{left : -300%;}
+	98%	{left : -300%;}
+
+	100%	{left : 0;}
+}
+
+/******************************************** mobile ********************************************/
+
+@media handheld, screen and (max-width : 800px), print
+{
+	#picker > div > div
+	{
+		font-weight : normal;
+		display : inline;
+	}
+}
