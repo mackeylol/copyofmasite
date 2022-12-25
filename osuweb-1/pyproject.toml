@@ -1,0 +1,14 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool]
+[tool.poetry]
+authors = ["NotShigetora <NotShigetora@gmail.com>"]
+description = ""
+name = "osuweb-1"
+version = "0.1.0"
+[tool.poetry.dependencies]
+flask = "^1.1"
+python = "^3.8"
+[tool.poetry.dev-dependencies]
