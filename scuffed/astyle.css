@@ -1,0 +1,62 @@
+html, body {
+ 
+  
+}
+
+
+#title { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#items { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}#upgradetable { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#cookslot { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#cookiestable { 
+  border: 3px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#itemstable { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#statstable { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#tablename { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#buttontable { 
+  border: 6px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+#body { 
+  border: 20px solid transparent;
+  padding: 10px;
+  border-image: url(border.png) 30 stretch;
+}
+p {
+  color: white;
+  font-size: 140%;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  
+}
+

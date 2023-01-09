@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cookie Clicker</title>
+  <link rel="icon"href="cookie.png">
+  <link href="astyle.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body id = "body"  style = "border-style:double" width = "100%">
+  <center>
+
+    <!--Mouse position !-->
+ 
+
+    <!-- AUDIO FILES!-->
+    <audio id = "gold">
+      <source src="goldsound.ogg" type="audio/ogg">
+      <source src="goldsound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect">
+      <source src="clickb1.ogg" type="audio/ogg">
+      <source src="clickb1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect2">
+      <source src="clickb2.ogg" type="audio/ogg">
+      <source src="clickb2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect3">
+      <source src="clickb3.ogg" type="audio/ogg">
+      <source src="clickb3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect4">
+      <source src="clickb4.ogg" type="audio/ogg">
+      <source src="clickb4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect5">
+      <source src="clickb5.ogg" type="audio/ogg">
+      <source src="clickb5.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "clickeffect6">
+      <source src="clickb6.ogg" type="audio/ogg">
+      <source src="clickb6.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- Layout of entire game!-->
+    <table id = "layout" background = "backgrounde.jpg" border = "style:double" width = "99.5%" height = "95%">
+
+      <!-- Title !-->
+      <th  id = "title" background = "background3.jpg" colspan = "3"><font size="+3" style = "color:white"  draggable='false'>Cookie Clicker</th>
+        <l id = "savebruh"></l>
+      
+
+      <!--<th width = 25%><p>NEWS: <l id = "news"></l></p></th>!-->
+      <tr>
+        
+        <td id = "tablename">    
+          
+          <!-- Bakery Name !-->
+            <font size= "+2"><b><center><p><l id = "name"></l></p></center></b></font>
+            <img id = "gold1" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+            <l id = "set"></l>
+        </td>
+
+        <!-- Buttons !-->
+        <td id = "buttontable">
+          <img id = "gold2" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+          <center><table>
+            <tr>
+              <td><button id = "namechange" ><img src = "namebutton.webp" width = 50 height = 50 draggable='false'><br>New Name</button></td>
+              <td><button id = "reset"><img src = "resetbutton.png" width =65 height = 50 draggable='false'><br>Reset</button></td>
+              <td><button id = "rebirth"><img src = "angel.png" width =65 height = 50 draggable='false'><br>Rebirth</button></td>
+              <l id = "recost"></l>
+            </tr>
+
+          
+          </table></center>
+        
+        
+        
+        </td>
+       
+
+        <!-- ITEMS !-->
+        <th id = "items"><p font size = "+2">⠀⠀⠀⠀Items⠀⠀⠀⠀</p>
+
+        <img id = "gold3" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+        <!--Buy X ammount!-->
+        <center>
+          <button id = "buy1"> Buy 1</button>
+          <button id = "buy10"> Buy 10</button>
+          <button id = "buy100"> Buy 100</button>
+          <button id = "buy1000"> Buy 1000</button>
+
+          
+        </center>
+        
+        </th>
+      </tr>
+        
+      <tr>
+        <!-- Cookie !-->
+        <td id = "cookslot" bgcolor = "white" id = "cookiestable">
+          
+          <center><l  style = "border:none"><img src = "cookie.png" width = "82%" height = "82%" id = "cookie" draggable='false'></l></center>
+          <img id = "gold4" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+        </td>       
+        <td id = "statstable">
+          <!-- stats !-->
+          <center><p font size = "-3">  <b><l id = "label1"></b><br> </l><l id = "score"></l></p></center>
+          <center><p font size = "-3"><b><l id = "label2"></b> </l><br><l id = "clicks"></l></p></center>
+          <center><p font size = "-3"><b>  <l id = "label3"></l> </b> <br><l id = "cps"> </p></center>
+
+       
+          <center><p font size = "-3"><b>  <l id = "label4"></l></b> <l id = "multi">%</p></center>
+          <center><p font size = "-3"><b>  <l id = "label5"></l></b>  <l id = "totalc"></p></center>
+          
+        <td id = "itemstable">
+             <img id = "gold5" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+          
+          <center><table width = "100%">
+            
+            <img id = "gold6" src = "goldcook.png" width = 70 height = 70 draggable='false'>
+            
+            <!-- Items list !-->
+              <center><tr>
+                
+                <l id = "save2"></l>
+                <l id = "save3"></l>
+                <l id = "save4"></l>
+                <l id = "save5"></l>
+                <l id = "save6"></l>
+                <l id = "save7"></l>
+                <l id = "save8"></l>
+                <l id = "save9"></l>
+                <l id = "save10"></l>
+                <l id = "save11"></l>
+                <l id = "save12"></l>
+                <l id = "save13"></l>
+                <l id = "save14"></l>
+                <l id = "save15"></l>
+                <l id = "save16"></l>
+                <l id = "save17"></l>
+                <l id = "save18"></l>
+                <td><button id = "cursor"><img src = "cursor.png" width = 40 height = 40  draggable='false'> Cursor (15)        </button >
+
+               <button  id = "AI"><img id = "item10" src = "robot.png"  width = 40 height = 40  draggable='false'><l id = "name10"></l></button>
+              </td>
+                
+                <td ><button  id = "grandma"><img id = "item2" src = "grandma.webp"  width = 40 height = 40  draggable='false'><l id = "name2"></l></button>
+
+                <button  id = "alien"><img id = "item11" src = "alien.png"  width = 40 height = 40  draggable='false'><l id = "name11"></l></button>
+              
+                </td>
+                
+                <td ><button  id = "children"><img  id = "item3" src = "children.png" width = 40 height = 40  draggable='false'><l id = "name3"></l></button>
+
+                <button  id = "antimatter"><img id = "item12" src = "antimatter.webp"  width = 40 height = 40  draggable='false'><l id = "name12"></l></button>
+                
+                </td>
+                
+          </tr></center>
+
+          <center><tr>
+                   
+                <td ><button id = "factory"><img id = "item4" src = "factory.png" width = 40 height = 40  draggable='false'><l id = "name4"></l> </button>
+                <button  id = "converter"><img id = "item13" src = "converter.webp"  width = 40 height = 40  draggable='false'><l id = "name13"></l></button>
+                
+                </td>
+                <td ><button  id = "skyscrapper"><img  id = "item5" src = "skyscrapper.png" width = 40 height = 40  draggable='false'><l id = "name5"></l></button>
+                <button  id = "fractal"><img id = "item14" src = "fractal.webp"  width = 40 height = 40  draggable='false'><l id = "name14"></l></button>
+                </td>
+                <td ><button  id = "giga"><img  id = "item6" src = "giga.png" width = 40 height = 40  draggable='false'><l id = "name6"></l></button>
+                <button  id = "futuregiga"><img id = "item15" src = "futurechad.png"  width = 40 height = 40  draggable='false'><l id = "name15"></l></button>
+                </td>
+          </tr></center>
+
+          <center><tr>
+               <td ><button id = "jet"><img id = "item7" src = "privjet.png" width = 40 height = 40  draggable='false'><l id = "name7"></l> </button>
+               <button  id = "java"><img id = "item16" src = "javascript.webp"  width = 40 height = 40  draggable='false'><l id = "name16"></l></button>
+               </td>
+               <td ><button id = "ship"><img id = "item8" src = "spaceship.png" width = 40 height = 40  draggable='false'><l id = "name8"></l> </button>
+               <button  id = "universe"><img id = "item17" src = "universe.png"  width = 40 height = 40  draggable='false'><l id = "name17"></l></button>
+               </td>
+               <td ><button id = "time"><img id = "item9" src = "timemac.jpg.png" width = 40 height = 40  draggable='false'><l id = "name9"></l> </button>
+               <button  id = "light"><img id = "item18" src = "light.png"  width = 40 height = 40  draggable='false'><l id = "name18"></l></button>
+               </td>
+
+            
+          </tr>
+          </center>
+            
+          </table>
+
+<br>
+          
+              <button id = "left"><--</button>
+              <button id = "right">--></button>
+         
+        </td>
+
+    
+      </tr>
+
+      <tr>
+        
+        
+      </tr>
+      <th background = "background3.jpg" colspan = "3">
+  <center><table >
+    <tr border = "1"  draggable='false'>
+      
+      <td><p>Items this session: <l id = "boughts"></l></p></td>
+      <td>⠀⠀⠀⠀</td>
+      <td><p>Items total: <l id = "bought"></l></p></td>  
+    </tr>
+  </table></center>
+    </th>
+    </table>
+    
+  </center>
+
+    <!--bought images!-->
+  <div>
+    <table>
+      <tr id = "image1" border = "1" borderColor = "black"></tr>
+      <tr id = "image2" border = "1" borderColor = "black"></tr>
+      <tr id = "image3" border = "1" borderColor = "black"></tr>
+      <tr id = "image4" border = "1" borderColor = "black"></tr>
+      <tr id = "image5" border = "1" borderColor = "black"></tr>
+      <tr id = "image6" border = "1" borderColor = "black"></tr>
+      <tr id = "image7" border = "1" borderColor = "black"></tr>
+      <tr id = "image8" border = "1" borderColor = "black"></tr>
+      <tr id = "image9" border = "1" borderColor = "black"></tr>
+      <tr id = "image10" border = "1" borderColor = "black"></tr>
+      <tr id = "image11" border = "1" borderColor = "black"></tr>
+      <tr id = "image12" border = "1" borderColor = "black"></tr>
+      <tr id = "image13" border = "1" borderColor = "black"></tr>
+      <tr id = "image14" border = "1" borderColor = "black"></tr>
+      <tr id = "image15" border = "1" borderColor = "black"></tr>
+      <tr id = "image16" border = "1" borderColor = "black"></tr>
+      <tr id = "image17" border = "1" borderColor = "black"></tr>
+      <tr id = "image18" border = "1" borderColor = "black"></tr>
+    </table>
+  </div>
+
+  
+  <script src="script.js">
+  </script>
+
+  
+
+</body>
+
+</html>
