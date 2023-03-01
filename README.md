@@ -1,11 +1,11 @@
 <h1 align="center">
   <br>
-  <a href="kackee.tk"><img src="https://github.com/mackeylol/copyofmasite/blob/main/capyg.png?raw=true" alt="capy!" width="200"></a>
+  <a href="kackee.tk"><img src="https://github.com/mackeylol/copyofmasite/blob/main/logo.png?raw=true" alt="Kapy!" width="200"></a>
   <br>
- capy games
+ Kapy games
   <br>
 </h1>
-<h4 align="center">a unblocked games site.<a href="http://kackee.tk" target="_blank">capygames</a>.</h4>
+<h4 align="center">a unblocked games site.<a href="http://kackee.tk" target="_blank">Kapy Games</a>.</h4>
 <p align="center">
 <h2 id="runlocally">Run Locally</h2>
 <p>First clone the project using command line</p>
@@ -21,6 +21,6 @@ or <a href="http://localhost:8080/"><code>localhost:8080</code></a> to see it.</
   Cloning a repository with Git removes everything in the folder you do it in. If you're not careful, you can delete your hard drive, so please do not do this unless you know what you're doing.</p>
 </blockquote>
 <h1 align="center">
-  <h1>anyway stay capy!!</h1>
+  <h1>anyway stay Kapy!!</h1>
 
-  <a href="kackee.tk"><img src="https://kackee.tk/capybara.gif" alt="capy!" width="200">
+  <a href="kackee.tk"><img src="https://kackee.tk/capybara.gif" alt="Kapy!" width="200">
