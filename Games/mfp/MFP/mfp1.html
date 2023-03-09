@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>KapyGames - Super smash flash 1</title>
+	<title>KapyGames - MFP 1</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="nav.css">
 	<script src="script.js"></script>
@@ -47,7 +47,7 @@ iframe {
 	  </style>
   <nav>
 	<div class="logo">
-	   <h1>Super smash flash 1</h1>
+	   <h1>MFP 1</h1>
 	</div>
 	<input type="checkbox" id="click">
 	<label for="click" class="menu-btn">
@@ -60,6 +60,24 @@ iframe {
 	</ul>
  </nav>
 <h1>Right click on ruffle and press enter fullscreen!!!</h1>
- <iframe src="ruffle.html" frameborder="0" scrolling="no" seamless="seamless" style="display:block; width:100%; height:100vh;"></iframe>
+
+<div id='ruffle'></div>
+<script src="https://mackeylol.com/ruffle/ruffle.js"></script>
+       <script>
+var swfobject = {};
+
+swfobject.embedSWF = function(url, cont, width, height){
+   var ruffle = window.RufflePlayer.newest(),
+       player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+           width: width,
+           height: height,
+           style: 'width: ' + width + 'px; height: ' + height + 'px',
+       });
+   
+   player.load({ url: url });
+}
+
+swfobject.embedSWF('https://kackee.tk/Games/mfp/MFP/1.swf', 'ruffle', 500, 500);
+       </script>
 
  </body>
