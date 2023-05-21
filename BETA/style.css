@@ -47,3 +47,35 @@
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 }
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .content {
+	min-height: calc(100% - 80px); /* Adjust the value (80px) according to your footer height */
+  }
+  
+  footer {
+	background-color: #CBAB58;
+	padding: 20px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .logo img {
+	height: 50px;
+  }
+  
+  .links a {
+	margin-left: 10px;
+	text-decoration: none;
+	color: #333;
+  }
+  
