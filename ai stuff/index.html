@@ -21,6 +21,7 @@
         
     </head>
     <body>
+      
       <nav class="navbar">
         <div class="content">
           <div class="logo"><a href="index.html">Kapy games</a></div>
@@ -143,26 +144,53 @@ nav a.active {
 
 
 
-  <div id="search-bar">
-    <input type="text" id="search-input" placeholder="Search" oninput="searchPage()" />
-  </div>
-  <script>
-    function searchPage() {
-      var searchTerm = document.getElementById("search-input").value.toLowerCase();
-      var paragraphs = document.getElementsByTagName("p");
-
-      for (var i = 0; i < paragraphs.length; i++) {
-        var paragraphText = paragraphs[i].innerText.toLowerCase();
-
-        if (paragraphText.includes(searchTerm)) {
-          paragraphs[i].style.display = "block";
-        } else {
-          paragraphs[i].style.display = "none";
-        }
-      }
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
     }
-    
+
+    html, body {
+      font-family: "./PLANK___.ttf", sans-serif;
+      background: #2b2b2b;
+      padding: 80px 30px 30px;
+      color: rgb(0, 0, 0);
+      height: 100%;
+    }
+
+    /* Other CSS styles... */
+
+    /* New CSS styles when the button is pressed */
+    .button-pressed {
+      background: #d4d4d4;
+    }
+
+    .button-pressed h1 {
+      color: #3454a7;
+    }
+
+    .button-pressed a {
+      color: #3454a7;
+    }
+
+    /* Other CSS styles... */
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#myButton").click(function() {
+        $("html, body").toggleClass("button-pressed");
+      });
+    });
   </script>
+</head>
+<body>
+  <button id="myButton">Dark and light mode</button>
+
+
+</body>
+
+
 
 
 <h1>JELEEL YEAH!!  <a href="./BETA/index.html">BTW NEW BETA.</h1>
