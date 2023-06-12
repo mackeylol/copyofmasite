@@ -47,7 +47,7 @@
   <meta name="robots" content="noindex">
 
   <link rel="shortcut icon" type="image/x-icon" href="<svg xmlns="./steamuserimages-a.akamaihd.gif" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+  <path stroke-linecap="round"  stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
 </svg>
 
 
@@ -141,10 +141,28 @@ nav a.active {
   
 </head>
 
-<form id="search-form">
-  <input type="text" id="search-term" placeholder="Search...">
-  <button type="submit">Search</button>
-</form>
+
+
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search" oninput="searchPage()" />
+  </div>
+  <script>
+    function searchPage() {
+      var searchTerm = document.getElementById("search-input").value.toLowerCase();
+      var paragraphs = document.getElementsByTagName("p");
+
+      for (var i = 0; i < paragraphs.length; i++) {
+        var paragraphText = paragraphs[i].innerText.toLowerCase();
+
+        if (paragraphText.includes(searchTerm)) {
+          paragraphs[i].style.display = "block";
+        } else {
+          paragraphs[i].style.display = "none";
+        }
+      }
+    }
+    
+  </script>
 
 
 <h1>JELEEL YEAH!!  <a href="./BETA/index.html">BTW NEW BETA.</h1>
